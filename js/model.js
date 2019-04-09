@@ -71,6 +71,11 @@
 	Model.prototype.update = function (id, data, callback) {
 		this.storage.save(data, callback, id);
 	};
+
+	Model.prototype.delete = function (id, callback){
+		this.storage.delete(id, callback);
+	}
+
 	/**
 	 * Returns a count of all todos
 	 */

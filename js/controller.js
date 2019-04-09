@@ -23,6 +23,11 @@
 		that.view.bind('toggleAll', function (status) {
 			that.toggleAll(status.completed);
 		});
+
+		that.view.bind('delete', function (item) {
+			that.delete(item.id);
+		});
+
 	}
 
 	/**
@@ -35,6 +40,14 @@
 		var page = route || '';
 		this._updateFilterState(page);
 	};
+
+	Controller.prototype.delete = function(item_id){
+		var that = this;
+		that.model.delete(item_id, function (data) {
+			that._filter(true);
+		});
+
+	}
 
 	/**
 	 * An event to fire on load. Will get all items and display them in the

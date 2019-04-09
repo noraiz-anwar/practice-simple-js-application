@@ -104,6 +104,26 @@
 			callback.call(this, [updateData]);
 		}
 	};
+	
+	Store.prototype.delete = function(id, callback){
+		
+		var data = JSON.parse(localStorage[this._dbName]);
+		var todos = data.todos;
+		callback = callback || function () {};
+		
+		for (var i = 0; i < todos.length; i++) {
+			if (todos[i].id === id) {
+				data.todos.splice(i,1)
+				break;
+			}
+		}
+		localStorage[this._dbName] = JSON.stringify(data);
+		console.log('data', data)
+		callback(data)
+
+	}
+
+
 	/**
 	 * Will drop all storage and start fresh
 	 *

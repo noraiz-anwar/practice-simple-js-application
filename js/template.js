@@ -12,6 +12,7 @@
 		=	'<li data-id="{{id}}" class="{{completed}}">'
 		+		'<div class="view">'
 		+			'<input class="toggle" type="checkbox" {{checked}}>'
+		+			'<input id="delete-todo" type="checkbox">'
 		+			'<label>{{title}}</label>'
 		+		'</div>'
 		+	'</li>';
