@@ -99,6 +99,10 @@
                 });
             });
 
+        } else if (event == 'delete') {
+            $live('#delete-todo', 'click', function () {
+                handler({id: that._itemId(this)});
+            });
         }
     };
 

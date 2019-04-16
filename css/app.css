@@ -37,6 +37,25 @@ input[type="checkbox"] {
   outline: none;
 }
 
+#delete-todo {
+  background: transparent;
+  border: 1px solid #f00;
+  border-radius: 2em;
+  color: #f00;
+  display: inline-block;
+  font-size: 12px;
+  height: 20px;
+  line-height: 2px;
+  margin: 0 0 8px;
+  padding: 0;
+  text-align: center;
+  width: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px
+  }
+  
+
 #todoapp {
   background: #fff;
   background: rgba(255, 255, 255, 0.9);
